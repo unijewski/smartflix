@@ -1,7 +1,7 @@
 class CreateMovieWorker
   include Sidekiq::Worker
 
-  def perform(*args)
-    # Do something
+  def perform
+    Movie.create!(title: Faker::Movie.title)
   end
 end
