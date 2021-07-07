@@ -4,7 +4,7 @@ RSpec.describe Apis::Omdb::Movie do
   describe '#call' do
     subject { described_class.new(title: 'The Social Network').call }
 
-    around { |example| VCR.use_cassette('omdb_movie', match_requests_on: %i[host method body], &example) }
+    around { |example| VCR.use_cassette('omdb_movie', &example) }
 
     it 'returns 200 status' do
       expect(subject.code).to eq(200)
