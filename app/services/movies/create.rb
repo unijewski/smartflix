@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Movies
   class Create
     def initialize(title:)

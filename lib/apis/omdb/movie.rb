@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Apis
   module Omdb
     class Movie < Base
