@@ -8,7 +8,7 @@ module Movies
 
     def call
       response_body = fetch_data
-      return unless response_body[:response]
+      return log_warn unless response_body[:response]
 
       create_movie(response_body)
     end
@@ -31,6 +31,10 @@ module Movies
         hash.symbolize_keys!
         hash[:response] = ActiveModel::Type::Boolean.new.cast(data[:response].downcase)
       end
+    end
+
+    def log_warn
+      Rails.logger.warn("#{title} movie not found!")
     end
 
     def create_movie(response)

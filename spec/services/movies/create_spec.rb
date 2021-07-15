@@ -56,5 +56,10 @@ RSpec.describe Movies::Create do
     it 'does not create a Movie record' do
       expect { subject }.not_to change(Movie, :count)
     end
+
+    it 'logs a warning' do
+      expect(Rails.logger).to receive('warn').with('foobar movie not found!')
+      subject
+    end
   end
 end
