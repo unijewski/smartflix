@@ -35,10 +35,3 @@ RSpec/NamedSubject:
 RSpec/StubbedMock:
   Exclude:
     - 'spec/workers/create_movie_worker_spec.rb'
-
-# Offense count: 1
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: slashes, arguments
-Rails/FilePath:
-  Exclude:
-    - 'spec/rails_helper.rb'
