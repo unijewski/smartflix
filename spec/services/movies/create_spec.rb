@@ -22,13 +22,13 @@ RSpec.describe Movies::Create do
       writer: 'Aaron Sorkin (screenplay), Ben Mezrich (book)',
       actors: 'Jesse Eisenberg, Rooney Mara, Bryan Barter, Dustin Fitzsimons',
       plot: 'As Harvard student Mark Zuckerberg creates the social networking site that would become known as '\
-        'Facebook, he is sued by the twins who claimed he stole their idea, and by the co-founder who was later '\
-        'squeezed out of the business.',
+            'Facebook, he is sued by the twins who claimed he stole their idea, and by the co-founder who was later '\
+            'squeezed out of the business.',
       language: 'English, French',
       country: 'USA',
       awards: 'Won 3 Oscars. Another 169 wins & 186 nominations.',
       poster: 'https://m.media-amazon.com/images/M/MV5BOGUyZDUxZjEtMmIzMC00MzlmLTg4MGItZWJmMzBhZjE0Mjc1XkEyXkFqcGde'\
-        'QXVyMTMxODk2OTU@._V1_SX300.jpg',
+              'QXVyMTMxODk2OTU@._V1_SX300.jpg',
       ratings: 'Internet Movie Database: 7.7/10, Rotten Tomatoes: 96%, and Metacritic: 95/100',
       metascore: 95,
       imdb_rating: 7.7,
