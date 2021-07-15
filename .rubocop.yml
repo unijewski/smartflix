@@ -19,3 +19,11 @@ Layout/EmptyLinesAroundClassBody:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+
+RSpec/ContextWording:
+  Prefixes:
+    - when
+    - with
+    - without
+    - if
+    - and
