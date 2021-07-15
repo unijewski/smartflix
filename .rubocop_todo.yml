@@ -11,9 +11,3 @@
 RSpec/ExampleLength:
   Exclude:
     - 'spec/services/movies/create_spec.rb'
-
-# Offense count: 2
-# Configuration parameters: .
-# SupportedStyles: have_received, receive
-RSpec/MessageSpies:
-  EnforcedStyle: receive

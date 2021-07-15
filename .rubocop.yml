@@ -35,3 +35,6 @@ Style/Documentation:
 
 RSpec/NamedSubject:
   Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
