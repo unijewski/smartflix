@@ -21,12 +21,3 @@ RSpec/MessageSpies:
 # Offense count: 1
 RSpec/MultipleExpectations:
   Max: 2
-
-# Offense count: 7
-# Configuration parameters: IgnoreSharedExamples.
-RSpec/NamedSubject:
-  Exclude:
-    - 'spec/lib/apis/omdb/base_spec.rb'
-    - 'spec/lib/apis/omdb/movie_spec.rb'
-    - 'spec/services/movies/create_spec.rb'
-    - 'spec/workers/create_movie_worker_spec.rb'

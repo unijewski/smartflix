@@ -32,3 +32,6 @@ RSpec/ContextWording:
 
 Style/Documentation:
   Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
