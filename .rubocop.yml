@@ -29,3 +29,6 @@ RSpec/ContextWording:
     - without
     - if
     - and
+
+Style/Documentation:
+  Enabled: false
