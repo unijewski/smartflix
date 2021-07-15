@@ -17,7 +17,3 @@ RSpec/ExampleLength:
 # SupportedStyles: have_received, receive
 RSpec/MessageSpies:
   EnforcedStyle: receive
-
-# Offense count: 1
-RSpec/MultipleExpectations:
-  Max: 2
