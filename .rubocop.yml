@@ -38,3 +38,6 @@ RSpec/NamedSubject:
 
 RSpec/MessageSpies:
   Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
