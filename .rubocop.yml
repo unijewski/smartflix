@@ -9,3 +9,6 @@ AllCops:
     - 'bin/**/*'
     - 'config/**/*'
     - 'db/**/*'
+
+Layout/LineLength:
+  Max: 120
