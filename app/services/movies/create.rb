@@ -34,7 +34,7 @@ module Movies
     end
 
     def log_warn
-      Rails.logger.warn("#{title} movie not found!")
+      Rails.logger.warn("#{Time.current}: #{title} movie not found!")
     end
 
     def create_movie(response)
