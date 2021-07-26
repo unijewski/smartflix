@@ -9,7 +9,7 @@ module Apis
       end
 
       def call
-        self.class.get('', query: { t: title })
+        self.class.get('', query: { t: title }).parsed_response
       end
 
       private
