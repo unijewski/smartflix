@@ -3,3 +3,10 @@
 :queues:
   - default
   - movies
+:schedule:
+  update_all_movies:
+    cron: '0 7 * * *'
+    class: UpdateAllMoviesWorker
+  delete_outdated_movies:
+    cron: '0 8 * * *'
+    class: DeleteOutdatedMoviesWorker
