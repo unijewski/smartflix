@@ -58,7 +58,9 @@ RSpec.describe Movies::Create do
     end
 
     it 'logs a warning' do
-      expect(Rails.logger).to receive('warn').with('foobar movie not found!')
+      travel_to Time.utc(2021, 7, 26, 11, 44)
+
+      expect(Rails.logger).to receive('warn').with('2021-07-26 11:44:00 UTC: foobar movie not found!')
       subject
     end
   end
