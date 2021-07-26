@@ -7,10 +7,10 @@ module Movies
     end
 
     def call
-      response_body = fetch_data
-      return false unless response_body[:response]
+      attributes = fetch_data
+      return false unless attributes[:response]
 
-      update_movie(response_body)
+      update_movie(attributes)
     end
 
     private
@@ -22,8 +22,9 @@ module Movies
       Apis::Omdb::Builders::Movie.new(data: data).build
     end
 
-    def update_movie(response)
-      movie.update!(response.except(:response))
+    def update_movie(attributes)
+      movie_attributes = attributes.except(:response)
+      movie.update!(movie_attributes)
     end
   end
 end

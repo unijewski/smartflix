@@ -7,10 +7,10 @@ module Movies
     end
 
     def call
-      response_body = fetch_data
-      return log_warn unless response_body[:response]
+      attributes = fetch_data
+      return log_warn unless attributes[:response]
 
-      create_movie(response_body)
+      create_movie(attributes)
     end
 
     private
@@ -26,8 +26,9 @@ module Movies
       Rails.logger.warn("#{Time.current}: #{title} movie not found!")
     end
 
-    def create_movie(response)
-      Movie.create!(response.except(:response))
+    def create_movie(attributes)
+      movie_attributes = attributes.except(:response)
+      Movie.create!(movie_attributes)
     end
   end
 end
