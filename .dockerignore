@@ -1,0 +1,16 @@
+Dockerfile
+.dockerignore
+docker-compose.yml
+.DS_Store
+.bin
+.git
+.gitignore
+.bundleignore
+.bundle
+.byebug_history
+.rspec
+tmp
+log
+spec
+node_modules
+coverage
