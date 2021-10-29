@@ -14,4 +14,4 @@ RUN apt-get update && apt-get install -y yarn
 
 RUN yarn install --check-files
 
-CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
+CMD rm -f tmp/pids/server.pid && bundle exec rails s -b 0.0.0.0
