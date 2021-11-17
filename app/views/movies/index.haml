@@ -1,0 +1,26 @@
+%h1 Movies list
+%table.table.table-striped
+  %thead
+    %tr
+      %th{ scope: "col" } #
+      %th{ scope: "col" } Poster
+      %th{ scope: "col" } Title
+      %th{ scope: "col" } Plot
+      %th{ scope: "col" } Released
+  %tbody
+    - @movies.each do |movie|
+      %tr
+        %td= movie.id
+        %td= image_tag movie.poster, width: 80
+        %td= movie.title
+        %td= movie.plot
+        %td= movie.released
+        %td
+          = link_to "#", { class: "btn btn-primary btn-sm" } do
+            %i.fas.fa-search
+        %td
+          = link_to "#", { class: "btn btn-warning btn-sm" } do
+            %i.fas.fa-edit
+        %td
+          = link_to "#", { class: "btn btn-danger btn-sm" } do
+            %i.fas.fa-trash
