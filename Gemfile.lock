@@ -105,6 +105,9 @@ GEM
       raabro (~> 1.4)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    haml (5.2.2)
+      temple (>= 0.8.0)
+      tilt
     hashdiff (1.0.0)
     httparty (0.18.1)
       mime-types (~> 3.0)
@@ -260,6 +263,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    temple (0.8.2)
     thor (1.1.0)
     thwait (0.2.0)
       e2mmap
@@ -306,6 +310,7 @@ DEPENDENCIES
   database_cleaner-active_record
   factory_bot_rails
   faker
+  haml
   httparty
   jbuilder (~> 2.7)
   listen (~> 3.3)
