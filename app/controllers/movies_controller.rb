@@ -2,7 +2,7 @@
 
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.page(params[:page]).per(5)
   end
 
   def show
