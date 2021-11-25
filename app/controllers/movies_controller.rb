@@ -14,4 +14,8 @@ class MoviesController < ApplicationController
       render json: { error: 'Not found' }, status: :not_found
     end
   end
+
+  def top
+    @top_movies = TopMovie.all
+  end
 end

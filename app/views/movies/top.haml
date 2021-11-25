@@ -1,0 +1,17 @@
+%h1 Top 100 movies
+%table.table.table-striped
+  %thead
+    %tr
+      %th{ scope: "col" } #
+      %th{ scope: "col" } Poster
+      %th{ scope: "col" } Title
+      %th{ scope: "col" } Released
+      %th{ scope: "col" } Rating
+  %tbody
+    - @top_movies.each.with_index(1) do |movie, index|
+      %tr
+        %td= index
+        %td= image_tag movie.poster, width: 80
+        %td= movie.title
+        %td= movie.released
+        %td= movie.avg_rating
