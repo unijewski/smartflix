@@ -1,14 +1,14 @@
 %nav.navbar.navbar-expand-lg.navbar-light.bg-light
   .container-fluid
-    %a.navbar-brand{ href: "#" } Smartflix
+    %a.navbar-brand{ href: root_path } Smartflix
     %button.navbar-toggler{ "aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarSupportedContent", "data-bs-toggle" => "collapse", type: "button" }
       %span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       %ul.navbar-nav.me-auto.mb-2.mb-lg-0
         %li.nav-item
-          %a.nav-link.active{ "aria-current" => "page", href: "#" } Home
+          %a.nav-link{ "aria-label" => "Home", href: root_path } Home
         %li.nav-item
-          %a.nav-link{ href: "#" } Top
+          %a.nav-link{ "aria-label" => "Top", href: movies_top_path } Top
       %form.d-flex
         %input.form-control.me-2{ "aria-label" => "Search", placeholder: "Search", type: "search" }
         %button.btn.btn-outline-success{ type: "submit" } Search
