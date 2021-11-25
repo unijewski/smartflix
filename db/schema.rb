@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_141719) do
+ActiveRecord::Schema.define(version: 2021_11_24_143152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,4 +55,17 @@ ActiveRecord::Schema.define(version: 2021_11_24_141719) do
   end
 
   add_foreign_key "external_ratings", "movies"
+
+  create_view "top_movies", materialized: true, sql_definition: <<-SQL
+      SELECT movies.id,
+      movies.title,
+      movies.released,
+      movies.poster,
+      (avg(external_ratings.rating))::numeric(10,2) AS avg_rating
+     FROM (movies
+       LEFT JOIN external_ratings ON ((external_ratings.movie_id = movies.id)))
+    GROUP BY movies.id
+    ORDER BY ((avg(external_ratings.rating))::numeric(10,2)) DESC
+   LIMIT 100;
+  SQL
 end
